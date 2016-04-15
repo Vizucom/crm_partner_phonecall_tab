@@ -12,8 +12,8 @@
                             <tree editable="bottom" colors="gray:state in ('cancel','done');blue:state in ('pending',)" string="Phone Calls">
                                 <field name="date"/>
                                 <field name="partner_id"/>
-                                <field name="partner_phone"/>
                                 <field name="name"/>
+                                <field name="description"/>
                                 <field name="user_id"/>
                                 <field name="state"/>
                                 <button name="jump_to_details" string="Jump to details"
