@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="res_partner_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Phone calls">
+                        <field name="descendant_phonecall_ids" editable="1">
+                            <tree editable="bottom" colors="gray:state in ('cancel','done');blue:state in ('pending',)" string="Phone Calls">
+                                <field name="date"/>
+                                <field name="partner_id"/>
+                                <field name="partner_phone"/>
+                                <field name="name"/>
+                                <field name="user_id"/>
+                                <field name="state"/>
+                                <button name="jump_to_details" string="Jump to details"
+                                        class="oe_highlight" type="object" icon="STOCK_OPEN"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</openerp>
